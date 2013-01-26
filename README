@@ -5,9 +5,10 @@ Format of password hashes:
 
     $scrypt$logN=<LogN>,r=<R>,p=<P>$<SALT>$<PWDHASH>
 
-where LogN, R, P are scrypt cost parameters encoded as decimal numbers;
-SALT is a random salt, PWDHASH is the output of scrypt, both encoded in
-Base64 using custom alphabet.
+where LogN, R, P are scrypt cost parameters encoded as decimal numbers (in
+the exact specified order); SALT is a random salt, PWDHASH is the output of
+scrypt, both encoded in Base64 using custom alphabet.
+
 
 INSTALLATION
 
