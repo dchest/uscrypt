@@ -73,10 +73,10 @@ func (c *Config) IsValid() bool {
 	if uint64(c.R)*uint64(c.P) >= 1<<30 {
 		return false
 	}
-	if c.SaltSize <= minSaltSize {
+	if c.SaltSize < minSaltSize {
 		return false
 	}
-	if c.HashSize <= minHashSize {
+	if c.HashSize < minHashSize {
 		return false
 	}
 	return true
