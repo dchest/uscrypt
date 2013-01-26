@@ -12,7 +12,7 @@ import (
 var enc = base64.NewEncoding("./ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789")
 
 func base64Encode(b []byte) string {
-	// Decode.
+	// Encode.
 	dst := enc.EncodeToString(b)
 	// Remove padding.
 	return strings.TrimRight(dst, "=")
@@ -22,6 +22,6 @@ func base64Decode(s string) ([]byte, error) {
 	// Append padding.
 	padLen := 4 - (len(s) % 4)
 	s += "===="[:padLen]
-	// Encode.
+	// Decode.
 	return enc.DecodeString(s)
 }
