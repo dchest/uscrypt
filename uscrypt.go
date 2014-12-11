@@ -23,7 +23,7 @@ import (
 	"strconv"
 	"strings"
 
-	"code.google.com/p/go.crypto/scrypt"
+	"golang.org/x/crypto/scrypt"
 )
 
 const (
